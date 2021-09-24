@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tercer ejercicio</title>
+    <link rel="stylesheet" href="styles.css/tercerstyle.css">
+</head>
+<body>
+    <div id="navbar-hidden">
+        <ul>
+            <li><a href="primer.html"> primer ejercicio</a></li>
+         <li><a href="segundo.html">segundo ejercicio</a></li>
+            <li><a href="tercer.html">tercero ejercicio</a></li>
+            <li><a href="cuarto.html">cuarto ejercicio</a></li>
+        </ul>
+        </div> 
+        <div id="navbar">
+           
+        <ul>
+            <li><a href="primer.html">primer ejercicio</a> </li>
+            <li><a href="segundo.html"> segundo ejercicio</a></li>
+            <li><a href="tercer.html">tercero ejercicio</a> </li>
+            <li><a href="cuarto.html">cuarto ejercicio</a> </li>
+        </ul>
+        </div> 
+
+<br>
+   
+<form action="#" method="POST">
+    <h1>escribe los datos del primer parcial</h1>
+    <input type="number" id="n1" > <br>
+    <h1>escribe los datos del segundo parcial</h1>
+    <input type="number" id="n2"> <br>
+    <h1>escribe los datos del tercer parcial</h1>
+    <input type="number" id="n3"> <br>
+   <h1>escribe los datos del examen final</h1>
+    <input type="number" id="n4" > 
+    <br><br>
+       <button type="button" onclick="calcular();">calcular</button><br>
+</form><br>
+<div id="nota_d"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        var n1 =document.getElementById('n1').value;
+        var n2 =document.getElementById('n2').value;
+        var n3 =document.getElementById('n3').value;
+        var n4 =document.getElementById('n4').value;
+       
+        var np1=parseInt(n1) * 0.20;
+        var np2=parseInt(n2) * 0.25;
+        var np3=parseInt(n3) * 0.30;
+        var np4=parseInt(n4) * 0.25;
+
+        var nota_d = (np1 + np2 + np3 + np4 );
+
+        document.getElementById('nota_d').innerHTML=nota_d;
+
+      if(nota_d >= 3 ){
+          alert('Ganó la materia de programación: ' +nota_d);
+
+      }
+      
+      if(nota_d <= 3){
+         alert('perdio la materia de programacion: ' +nota_d);
+      }
+
+            
+    }
+</script>

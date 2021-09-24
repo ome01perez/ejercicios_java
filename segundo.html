@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>segundo ejercicio</title>
+    <link rel="stylesheet" href="styles.css/segundostyle.css">
+</head>
+<body>
+    <div id="navbar-hidden">
+        <ul>
+            <li><a href="primer.html"> primer ejercicio</a></li>
+         <li><a href="segundo.html">segundo ejercicio</a></li>
+            <li><a href="tercer.html">tercero ejercicio</a></li>
+            <li><a href="cuarto.html">cuarto ejercicio</a></li>
+        </ul>
+        </div> 
+        <div id="navbar">
+           
+        <ul>
+            <li><a href="primer.html">primer ejercicio</a> </li>
+            <li><a href="segundo.html"> segundo ejercicio</a></li>
+            <li><a href="tercer.html">tercero ejercicio</a> </li>
+            <li><a href="cuarto.html">cuarto ejercicio</a> </li>
+        </ul>
+        </div> 
+
+<br>
+
+ <h1>ingrese su sueldo</h1>
+<form action="#" method="POST">
+    <input type="number" id="sueldo"> <br>
+    <br>
+    <br>
+       <button type="button" onclick="calcular();">calcular</button><br>
+</form><br>
+<div id="total"></div>
+ <div id="pago"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var sueldo =document.getElementById('sueldo').value;
+      
+        if(sueldo > 1000000){
+        var resultado=parseInt(sueldo)* 0.05;
+        var total=resultado +  parseInt(sueldo);
+        document.getElementById('total').innerHTML=total;
+           }
+           if(sueldo < 800000){
+        var resul=parseInt(sueldo)* 0.10;
+        var pago=  parseInt(sueldo)+ resul;
+        document.getElementById('pago').innerHTML=pago;
+             
+         }    
+    }
+</script>
